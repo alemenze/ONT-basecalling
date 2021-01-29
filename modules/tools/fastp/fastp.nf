@@ -23,7 +23,7 @@ process fastp {
 
     script:
         """
-        fastp -i $reads -h ${meta}.html -L -Q 
+        fastp -i $reads -h ${meta}.html -A -L -Q 
         """
 
 }
