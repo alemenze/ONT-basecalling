@@ -22,6 +22,6 @@ process filtlong{
     
     script:
         """
-        filtlong --min_length 1000 --min_mean_q 90 $reads | gzip > ${meta}.trim.fastq.gz
+        filtlong --min_length $params.min_length --min_mean_q $params.min_mean_q $reads | gzip > ${meta}.trim.fastq.gz
         """
 }
